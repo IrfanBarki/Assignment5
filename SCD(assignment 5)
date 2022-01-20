@@ -63,3 +63,4 @@ public void ActionPerformed(ActionEvent ae)
 	 studentDao.saveRecord (student);	
 	}
 }
+print.out
