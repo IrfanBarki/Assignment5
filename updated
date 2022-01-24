@@ -1,0 +1,61 @@
+
+
+
+package DAO; 
+public class StudentDAO {
+public void saveRecord (Student std)
+    {
+        File file;
+        FileWriter fw;
+        BufferedWriter writer; 
+try
+        {            
+       	file=new 	file("C:\\Test\\StudentRecord.txt");
+        	if(!file.exists())        {
+                file.createNewFile();
+            }
+          fw= new FileWriter(file, true);
+          writer= new BufferedWriter(fw	
+	writer.write(name+ CGPA+CMS);
+          writer.close();
+        }
+        catch (Exception e)
+        {
+             System.out.println(e.toString());
+        }      
+    }    
+}
+package view;
+class SEStudentsFram extends Jframe implements ActionListener {
+	Jlabel labelName;
+	Jlabel labelCMS;
+	Jlabel labelCGPA;
+	JTextField textName;
+	JTextField textCMS;
+	JTextField textCGPA;
+	Jbutton buttonSave;
+public void SEStudentsFram () {
+		initializeComponents();
+	}
+public void initializeComponents() {
+	 labelName=new Jlabel(“Name”);
+	 labelCMS=new Jlabel(“CMS”);
+	 labelCNIC=new Jlabel(“CNIC”);
+	textName=new JTextField(30);
+	textCMS=new JTextField(30);
+	textCGPA=new JTextField(30);
+	
+buttonSave=new Jbutton();
+button.addActionListener(this);
+//add components to frame e.g. add(labelName)
+//set visible
+//EXIT_ON_CLOSE
+//etc
+public void ActionPerformed(ActionEvent ae)
+{
+	if(ae.getSource()==buttonSave)
+	{
+	Student std=new 	Student(textName.getText(), 	textCMS.getText(), textCGPA.getText()); 	 	StudentDAO studentDao = new StudentDAO();
+	 studentDao.saveRecord (student);	
+	}
+}
