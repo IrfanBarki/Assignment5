@@ -1,0 +1,10 @@
+public void initializeComponents() {
+	 labelName=new Jlabel(“Name”);
+	 labelCMS=new Jlabel(“CMS”);
+	 labelCNIC=new Jlabel(“CNIC”);
+	textName=new JTextField(30);
+	textCMS=new JTextField(30);
+	textCGPA=new JTextField(30);
+
+buttonSave=new Jbutton();
+button.addActionListener(this);
